@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact Us</title>
+        <link rel="stylesheet" href="styles.css">
+        <script defer src="script.js"></script>
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #f5f5f5;
+            }
+
+            /* Navbar */
+            .navbar {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 15px 50px;
+                background-color: #fff;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+
+            .logo img {
+                width: 180px;
+                height: auto;
+            }
+
+            nav ul {
+                list-style: none;
+                display: flex;
+                gap: 30px;
+            }
+
+            nav ul li {
+                display: inline;
+            }
+
+            nav ul li a {
+                text-decoration: none;
+                font-size: 18px;
+                color: #333;
+                font-weight: bold;
+                transition: color 0.3s ease;
+            }
+
+            nav ul li a:hover {
+                color: #007bff;
+            }
+
+            /* Contact Section */
+            .contact {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 50px 20px;
+                min-height: 100vh;
+                flex-wrap: wrap;
+                gap: 30px;
+                max-width: 1200px;
+                margin: auto;
+            }
+
+            .contact-info,
+            .contact-form {
+                flex: 1;
+                max-width: 500px;
+            }
+
+            .contact-info img {
+                width: 100%;
+                max-width: 350px;
+                height: auto;
+            }
+
+            .contact-form {
+                background: #e0f2e9;
+                padding: 30px;
+                border-radius: 8px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                opacity: 0;
+                transform: translateY(20px);
+                animation: fadeInUp 1s forwards;
+            }
+
+            .contact-form form {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .contact-form input,
+            .contact-form button {
+                margin: 10px 0;
+                padding: 12px;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+                width: 100%;
+            }
+
+            .btn {
+                background: #28a745;
+                color: white;
+                cursor: pointer;
+                transition: background 0.3s;
+            }
+
+            .btn:hover {
+                background: #218838;
+            }
+
+            /* Footer */
+            footer {
+                background-color: #06370d;
+                color: white;
+                padding: 20px;
+                text-align: center;
+            }
+
+            .footer-content {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+
+            .footer-logo {
+                width: 120px;
+                height: auto;
+            }
+
+            .footer-nav {
+                list-style: none;
+                display: flex;
+                gap: 30px;
+            }
+
+            .footer-nav li {
+                display: inline;
+            }
+
+            .footer-nav a {
+                text-decoration: none;
+                color: white;
+                font-weight: bold;
+            }
+
+            .footer-bottom {
+                margin-top: 15px;
+            }
+
+            /* Animation */
+            @keyframes fadeInUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            /* Responsive Design */
+            @media (max-width: 1024px) {
+                .contact {
+                    flex-direction: column;
+                    text-align: center;
+                }
+
+                .contact-info,
+                .contact-form {
+                    max-width: 90%;
+                }
+            }
+
+            @media (max-width: 768px) {
+                .navbar {
+                    flex-direction: column;
+                    text-align: center;
+                    padding: 15px;
+                }
+
+                nav ul {
+                    flex-direction: column;
+                    gap: 15px;
+                    padding-top: 10px;
+                }
+
+                .footer-content {
+                    flex-direction: column;
+                    text-align: center;
+                    gap: 20px;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <!-- Navbar -->
+        <header class="navbar">
+            <div class="logo">
+                <img src="images/here.png" alt="Demo Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Our Plans</a></li>
+                    <li><a href="#">Our Team</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Contact Section -->
+        <section class="contact">
+            <div class="contact-info">
+                <h2 style="color: rgb(33, 241, 37); margin-bottom: 10px;">Contact Us</h2>
+                <h1 style="color: darkgreen; font-size: 4.5rem; font-weight: bold; margin-bottom: 80px;">Get in Touch <br>with Ocozzio</h1>
+                
+                <img src="images/Group 441.png" alt="Map Location" style="margin-bottom: 20px;">
+            
+                <p style="margin-bottom: 15px;">
+                    <strong style="color: green;">Proudly Serving</strong>
+                    <strong style="color: darkgreen;">Your Community</strong>
+                </p>
+            
+                <p style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+                    <img src="images/Group 452.png" style="height: 20px; width: 20px;">
+                    1234 Horizon Lane, Suite 500, Evergreen City, CA 90210
+                </p>
+            
+                <p style="display: flex; align-items: center; gap: 10px;">
+                    <img src="images/phone-circle--android-phone-mobile-device-smartphone-iphone-circle-1.png" style="height: 20px; width: 20px;">
+                    (555) 123-4567
+                </p>
+            </div>
+            
+
+            <div class="contact-form">
+                <div style="text-align: center; margin-bottom: 20px;">
+                    <img src="images/Group 369.png" alt="Contact Icon" style="width: 100px; height: auto;">
+                    <h2 style="color: #004d40; margin-top: 10px;">Have questions about our products, services, or our
+                        team?</h2>
+                    <h3 style="color: green; font-size: 1.8rem;">Reach out!</h3>
+                </div>
+                <form id="contactForm">
+                    <input type="text" placeholder="First Name" required>
+                    <input type="text" placeholder="Last Name" required>
+                    <input type="email" placeholder="Email Address" required>
+                    <input type="text" placeholder="Company Name" required>
+                    <button type="submit" class="btn">Submit</button>
+                </form>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-content">
+                <img src="images/here.png" alt="Demo Logo" class="footer-logo">
+                <nav>
+                    <ul class="footer-nav">
+                        <li><a href="#">Our Plans</a></li>
+                        <li><a href="#">Our Team</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        
+            <div class="footer-bottom">
+                <p>Privacy Policy | (555) 123-4567 | info@demoproject.com</p>
+            </div>
+        </footer>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const form = document.querySelector(".contact-form");
+                setTimeout(() => {
+                    form.style.opacity = "1";
+                    form.style.transform = "translateY(0)";
+                }, 500);
+            });
+        </script>
+
+    </body>
+
+</html>
