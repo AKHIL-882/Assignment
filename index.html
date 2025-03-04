@@ -95,8 +95,10 @@
             }
 
             .contact-form {
-                background: #DEF3E7;
+                max-width: 400px;
+                /* Reduced from 500px */
                 padding: 30px;
+                background: #DEF3E7;
                 border-radius: 8px;
                 box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
                 opacity: 0;
@@ -242,7 +244,7 @@
             }
 
             .bulb-icon {
-                font-size:20px;
+                font-size: 20px;
                 cursor: pointer;
                 transition: transform 0.3s ease, filter 0.3s ease;
                 display: inline-block;
@@ -284,7 +286,7 @@
                 </ul>
             </nav>
         </header>
-        
+
 
         <!-- Contact Section -->
         <section class="contact">
@@ -379,8 +381,8 @@
             });
 
             function toggleMenu() {
-        document.querySelector("nav").classList.toggle("active");
-    }
+                document.querySelector("nav").classList.toggle("active");
+            }
         </script>
 
     </body>
