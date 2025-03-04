@@ -242,7 +242,7 @@
             }
 
             .bulb-icon {
-                font-size: 80px;
+                font-size:20px;
                 cursor: pointer;
                 transition: transform 0.3s ease, filter 0.3s ease;
                 display: inline-block;
@@ -258,7 +258,7 @@
 
             .dark-mode {
                 background-color: #121212;
-                color: white;
+                color: black;
             }
 
             .light-mode {
@@ -270,7 +270,6 @@
 
     <body>
 
-        <!-- Navbar -->
         <header class="navbar">
             <div class="logo">
                 <img src="images/here.png" alt="Demo Logo">
@@ -279,10 +278,13 @@
                 <ul>
                     <li><a href="#">Our Plans</a></li>
                     <li><a href="#">Our Team</a></li>
+
                     <li><a href="#">Contact Us</a></li>
+                    <span class="bulb-icon" id="bulb">💡</span>
                 </ul>
             </nav>
         </header>
+        
 
         <!-- Contact Section -->
         <section class="contact">
@@ -340,7 +342,6 @@
                             <li><a href="#">Contact Us</a></li>
                         </ul>
                     </nav>
-                    <span class="bulb-icon" id="bulb">💡</span>
                 </div>
 
                 <div class="footer-bottom">
@@ -376,6 +377,10 @@
                     form.style.transform = "translateY(0)";
                 }, 500);
             });
+
+            function toggleMenu() {
+        document.querySelector("nav").classList.toggle("active");
+    }
         </script>
 
     </body>
