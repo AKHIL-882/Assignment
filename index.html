@@ -214,6 +214,31 @@
                     gap: 20px;
                 }
             }
+
+            .bulb-icon {
+                font-size: 80px;
+                cursor: pointer;
+                transition: transform 0.3s ease, filter 0.3s ease;
+                display: inline-block;
+                transform: rotate(180deg);
+                /* Upside-down bulb */
+            }
+
+            .glow {
+                color: #ffeb3b;
+                text-shadow: 0 0 30px #ffeb3b;
+                transform: rotate(180deg) scale(1.1);
+            }
+
+            .dark-mode {
+                background-color: #121212;
+                color: white;
+            }
+
+            .light-mode {
+                background-color: #f5f5f5;
+                color: black;
+            }
         </style>
     </head>
 
@@ -238,7 +263,8 @@
             <div class="contact-info">
                 <h2 style="color: #23AB5E; margin-bottom: 10px;">Contact Us</h2>
                 <h1 style="color: 025B46; font-size: 4.5rem; font-weight: bold; margin-bottom: 80px;">Get in Touch
-                    <br>with Ocozzio</h1>
+                    <br>with Ocozzio
+                </h1>
 
                 <img src="images/Group 441.png" alt="Map Location" style="margin-bottom: 20px;">
 
@@ -288,16 +314,35 @@
                             <li><a href="#">Contact Us</a></li>
                         </ul>
                     </nav>
+                    <span class="bulb-icon" id="bulb">💡</span>
                 </div>
-        
+
                 <div class="footer-bottom">
                     <p>Privacy Policy | (555) 123-4567 | info@demoproject.com</p>
                 </div>
             </div>
         </footer>
-        
+
 
         <script>
+            const bulb = document.getElementById("bulb");
+            const body = document.body;
+
+            let isLightOn = false;
+
+            bulb.addEventListener("click", () => {
+                isLightOn = !isLightOn;
+                if (isLightOn) {
+                    bulb.classList.add("glow");
+                    body.classList.remove("dark-mode");
+                    body.classList.add("light-mode");
+                } else {
+                    bulb.classList.remove("glow");
+                    body.classList.remove("light-mode");
+                    body.classList.add("dark-mode");
+                }
+            });
+
             document.addEventListener("DOMContentLoaded", () => {
                 const form = document.querySelector(".contact-form");
                 setTimeout(() => {
