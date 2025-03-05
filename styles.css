@@ -310,3 +310,11 @@ footer {
     transform: rotate(-45deg) translate(5px, -5px);
   }
 }
+
+
+.contact-form button {
+    width: 60%;
+    display: block;
+    margin: 10px auto;
+  }
+  
