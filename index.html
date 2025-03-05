@@ -62,7 +62,6 @@
             nav ul li a {
                 text-decoration: none;
                 font-size: 18px;
-                color: #333;
                 font-weight: bold;
                 transition: color 0.3s ease;
             }
@@ -267,6 +266,99 @@
                 background-color: #f5f5f5;
                 color: black;
             }
+
+            .contact-form button {
+                width: 60%;
+                display: block;
+                margin: 10px auto;
+            }
+
+            /* Burger Menu Styles */
+            .burger {
+                display: none;
+                flex-direction: column;
+                cursor: pointer;
+                color: red;
+                position: relative;
+                z-index: 10;
+            }
+
+            .burger div {
+                width: 30px;
+                height: 4px;
+                background: rgb(182, 53, 53);
+                margin: 5px;
+                transition: all 0.3s ease;
+            }
+
+            /* Responsive Styles */
+            @media screen and (max-width: 768px) {
+                nav {
+                    position: absolute;
+                    top: 60px;
+                    left: 0;
+                    width: 100%;
+                    background: #333;
+                    display: none;
+                    flex-direction: column;
+                    text-align: center;
+                }
+
+                nav ul {
+                    flex-direction: column;
+                    width: 100%;
+                    padding: 10px 0;
+                }
+
+                nav ul li {
+                    margin: 15px 0;
+                }
+
+                .burger {
+                    display: flex;
+                }
+
+                /* Active Styles */
+                nav.active {
+                    display: flex;
+                }
+
+                .burger.active div:nth-child(1) {
+                    transform: rotate(45deg) translate(5px, 5px);
+                }
+
+                .burger.active div:nth-child(2) {
+                    opacity: 0;
+                }
+
+                .burger.active div:nth-child(3) {
+                    transform: rotate(-45deg) translate(5px, -5px);
+                }
+            }
+
+            @media (max-width: 768px) {
+                .footer-content {
+                    flex-direction: column;
+                    align-items: center;
+                    /* Change to center for better alignment */
+                    text-align: center;
+                    gap: 15px;
+                    width: 100%;
+                }
+
+                .footer-nav {
+                    flex-direction: column;
+                    gap: 10px;
+                    padding: 0;
+                    width: 100%;
+                }
+
+                .footer-nav li {
+                    display: block;
+                    width: 100%;
+                    text-align: center;
+                }
+            }
         </style>
     </head>
 
@@ -280,13 +372,16 @@
                 <ul>
                     <li><a href="#">Our Plans</a></li>
                     <li><a href="#">Our Team</a></li>
-
                     <li><a href="#">Contact Us</a></li>
-                    <span class="bulb-icon" id="bulb">💡</span>
                 </ul>
             </nav>
+            <span class="bulb-icon" id="bulb">💡</span>
+            <div class="burger" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
         </header>
-
 
         <!-- Contact Section -->
         <section class="contact">
@@ -337,17 +432,16 @@
             <div class="container">
                 <div class="footer-content">
                     <img src="images/here.png" alt="Demo Logo" class="footer-logo">
-                    <nav>
-                        <ul class="footer-nav">
-                            <li><a href="#">Our Plans</a></li>
-                            <li><a href="#">Our Team</a></li>
-                            <li><a href="#">Contact Us</a></li>
-                        </ul>
-                    </nav>
+                    <ul class="footer-nav">
+                        <li><a href="#">Our Plans</a></li>
+                        <li><a href="#">Our Team</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
                 </div>
 
                 <div class="footer-bottom">
-                    <p>Privacy Policy | (555) 123-4567 | info@demoproject.com</p>
+                    <p>Privacy Policy |  <img src="images/phone-circle--android-phone-mobile-device-smartphone-iphone-circle-1.png"
+                        style="height: 20px; width: 20px;">&nbsp;(555) 123-4567 |  &nbsp;&nbsp;<img src="images/Group 452.png" style="height: 20px; width: 20px;">  info@demoproject.com</p>
                 </div>
             </div>
         </footer>
@@ -382,6 +476,12 @@
 
             function toggleMenu() {
                 document.querySelector("nav").classList.toggle("active");
+            }
+            function toggleMenu() {
+                const nav = document.querySelector("nav");
+                const burger = document.querySelector(".burger");
+                nav.classList.toggle("active");
+                burger.classList.toggle("active");
             }
         </script>
 
