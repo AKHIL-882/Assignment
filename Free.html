@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Import Plus Jakarta Sans from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="relative">
+
+    <nav class="bg-white p-3 shadow-md">
+        <div class="mx-auto flex justify-between items-center relative">
+            <!-- Logo -->
+            <div class="logo">
+                <img src="images/here.png" alt="Demo Logo" class="w-[180px] h-auto">
+            </div>
+
+            <!-- Desktop Navigation Links -->
+            <div class="hidden md:flex space-x-10 absolute left-[65.33%] transform -translate-x-[50%]">
+                <a href="#" class="text-[#025B46] hover:text-gray-600 font-medium">Our Plans</a>
+                <a href="#" class="text-[#025B46] hover:text-gray-600 font-medium">Our Team</a>
+                <a href="#" class="text-[#025B46] hover:text-gray-600 font-medium">Contact Us</a>
+            </div>
+
+            <!-- Build Symbol (Bulb Icon) -->
+            <button id="bulb-btn" class="text-2xl text-[#025B46] hidden md:block focus:outline-none">
+                💡
+            </button>
+
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-3xl text-[#025B46]" id="menu-btn">☰</button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 bg-black bg-opacity-50 hidden flex justify-center items-center">
+        <div class="bg-[#025B46] text-white w-3/4 max-w-sm p-6 rounded-lg text-center space-y-4">
+            <a href="#" class="block text-lg">Home</a>
+            <a href="#" class="block text-lg">About</a>
+            <a href="#" class="block text-lg">Contact</a>
+
+            <button id="close-menu" class="text-xl mt-4">✖</button>
+        </div>
+    </div>
+
+    <section class="max-w-6xl mx-auto flex items-center mt-50">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 p-4 items-center">
+            <!-- Left Section -->
+            <div>
+                <h4 class="text-[#23AB5E] font-semibold text-lg text-5xl">Contact Us</h4>
+                <h2 class="text-5xl md:text-6xl font-bold mt-2 text-[#025B46]">Get in Touch with Ocozzio</h2>
+                <img src="images/Group 441.png" alt="Map Location" class="mt-6 rounded-lg w-full">
+
+                <h3 class="text-[#23AB5E] font-semibold text-xl mt-6">Proudly Serving <span
+                        class="text-[#025B46]">Your Community</span></h3>
+                <div class="mt-4 space-y-2">
+                    <p class="flex items-center text-gray-700">
+                        <span class="text-green-600 text-lg mr-2"> <img src="images/Group 452.png"
+                                style="height: 20px; width: 20px;"></span>
+                        1234 Horizon Lane, Suite 500, Evergreen City, CA 90210
+                    </p>
+                    <p class="flex items-center text-gray-700">
+                        <span class="text-green-600 text-lg mr-2"> <img
+                                src="images/phone-circle--android-phone-mobile-device-smartphone-iphone-circle-1.png"
+                                style="height: 20px; width: 20px;"></span>
+                        (555) 123–4567
+                    </p>
+                </div>
+            </div>
+
+            <!-- Right Section -->
+            <div class="bg-[#DEF3E7] p-8 rounded-lg shadow-lg">
+                <div class="flex flex-col items-center mt-40">
+                    <span class="text-red-500 text-5xl"> <img src="images/Group 369.png" alt="Contact Icon"
+                            style="width: 100px; height: auto;"></span>
+                    <p class="text-gray-700 text-center mt-4">Have questions about our products, services, or our
+                        team?</p>
+                    <h3 class="text-green-700 font-bold text-2xl mt-2">Reach out!</h3>
+                </div>
+
+                <form class="mt-10 space-y-4">
+                    <input type="text" placeholder="First Name*"
+                        class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
+                    <input type="text" placeholder="Last Name*"
+                        class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
+                    <input type="email" placeholder="Email Address*"
+                        class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
+                    <input type="text" placeholder="Company Name*"
+                        class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
+                        <button
+                        class="w-full mx-auto block bg-green-600 text-white p-3 rounded-md font-semibold hover:bg-green-700 transition duration-300">
+                        Submit
+                    </button>
+                    
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[#025B46] text-white py-8 mt-10">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
+                <div class="w-24">
+                    <img src="images/here.png" alt="Demo Logo" class="w-full">
+                </div>
+
+                <div class="flex space-x-12 text-lg font-medium">
+                    <a href="#" class="hover:underline">Our Plans</a>
+                    <a href="#" class="hover:underline">Our Team</a>
+                    <a href="#" class="hover:underline">Contact Us</a>
+                </div>
+            </div>
+
+            <div
+                class="mt-6 flex flex-col md:flex-row justify-center items-center text-sm space-y-4 md:space-y-0 md:space-x-10">
+                <a href="#" class="hover:underline">Privacy Policy</a>
+                <span class="flex items-center space-x-2">
+                    <span><img src="images/phone-circle--android-phone-mobile-device-smartphone-iphone-circle.png"
+                            style="height: 20px; width: 20px;"></span>
+                    <span>(555) 123-4567</span>
+                </span>
+                <span class="flex items-center space-x-2">
+                    <span><img src="images/Subtract.png" style="height: 20px; width: 20px;"></span>
+                    <span>info@demoproject.com</span>
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('menu-btn').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.remove('hidden');
+        });
+
+        document.getElementById('close-menu').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.add('hidden');
+        });
+
+        document.getElementById('bulb-btn').addEventListener('click', () => {
+            document.body.classList.toggle('bg-gray-900'); 
+            document.body.classList.toggle('text-white'); 
+        });
+    </script>
+
+</body>
+
+</html>
